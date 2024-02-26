@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
 const withAuth = (WrappedComponent: React.ComponentType) => {
-  return (props: any) => {
+  const higherOrderComponent = (props: any) => {
     const {status} = useSession()
     const router = useRouter()
     const isSignedIn = status==='authenticated'
@@ -20,6 +20,7 @@ const withAuth = (WrappedComponent: React.ComponentType) => {
 
     return <WrappedComponent {...props} />
   }
+  return higherOrderComponent
 }
 
 export default withAuth

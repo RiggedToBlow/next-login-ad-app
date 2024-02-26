@@ -41,7 +41,7 @@ export const AuthOptions: NextAuthOptions = {
         signIn:'/'
     }
 };
-const handler = NextAuth(AuthOptions)
+const handler = NextAuth(AuthOptions as any)
 
 export { handler as GET, handler as POST };
 
