@@ -19,7 +19,7 @@ const ImageUpload = ({ handleImageUpload, inputImages, width }: ImageUploadProps
         }
     }, [])
 
-    const onDrop = useCallback(acceptedFiles => {
+    const onDrop = useCallback((acceptedFiles:any[]) => {
         if (acceptedFiles.length > 5) {
             alert('You can only upload up to 5 images.');
             return;

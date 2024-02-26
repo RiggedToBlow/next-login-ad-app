@@ -62,7 +62,7 @@ const LoginForm = () => {
                             <InputGroup size="md">
                                 <Input defaultValue="test" pr="4.5rem" name="password" type={show ? "text" : "password"} placeholder="*******" />
                                 <InputRightElement width="4.5rem">
-                                    <IconButton h="1.75rem" size="sm" onClick={handleClick} icon={show ? <ViewOffIcon /> : <ViewIcon />} />
+                                    <IconButton aria-label="show-password" h="1.75rem" size="sm" onClick={handleClick} icon={show ? <ViewOffIcon /> : <ViewIcon />} />
                                 </InputRightElement>
                             </InputGroup>
                         </FormControl>
